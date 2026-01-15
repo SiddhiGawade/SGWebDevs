@@ -7,7 +7,7 @@ export default {
     theme: {
         extend: {
             colors: {
-                'brand-yellow': '#FFF200',
+                'brand-yellow': '#FC7F2C',
             },
             fontFamily: {
                 'primary': ['Oswald', 'sans-serif'],
