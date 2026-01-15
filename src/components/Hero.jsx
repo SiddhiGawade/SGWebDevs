@@ -1,25 +1,19 @@
-import React from 'react';
+import logo from '../assets/SPWebDevs Logo.png';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen bg-white text-black flex items-center justify-center p-4 relative overflow-hidden">
+    <section className="min-h-screen bg-white text-black flex items-center justify-center pl-40 pr-40 relative overflow-hidden">
       <div className="container mx-auto grid md:grid-cols-2 gap-8 items-center">
         {/* Left Content */}
         <div className="space-y-6 z-10">
           <div className="flex items-center space-x-2">
-            {/* Placeholder for Logo - effectively an SVG or Image */}
-             <div className="w-16 h-16 bg-black rounded-r-full rounded-b-full flex items-center justify-center">
-                <span className="text-white font-bold text-2xl">RE</span>
-             </div>
-             <div className="font-primary font-bold text-3xl leading-none">
-               RARE<br/>ELEPHANT<br/>MEDIA
-             </div>
+            <img src={logo} alt="SPWebDevs Logo" className="h-40 w-auto object-contain" />
           </div>
 
-          <h1 className="font-primary text-6xl md:text-8xl font-bold uppercase leading-tight">
-            Growing LinkedIn for<br/>
-            Personal Brands that<br/>
-            have a Story to tell
+          <h1 className="font-primary text-xl md:text-5xl font-bold uppercase leading-tight">
+            Web & Digital <br/>
+            Marketing<br/>
+            SEO Marketing Strategies
           </h1>
 
           <div className="flex flex-wrap gap-4">
