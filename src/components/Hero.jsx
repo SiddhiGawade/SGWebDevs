@@ -87,16 +87,16 @@ const Hero = () => {
             animate="show"
             className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-lg"
           >
-            <motion.button variants={itemVariants} className="bg-brand-yellow font-primary text-black px-6 py-4 rounded-full text-xl font-bold hover:scale-105 transition-transform w-full shadow-md">
+            <motion.button variants={itemVariants} className="bg-gradient-to-r from-orange-500 to-yellow-500 font-primary text-black px-6 py-4 rounded-full text-xl font-bold hover:scale-105 hover:shadow-lg transition-all w-full shadow-md">
               Who we are
             </motion.button>
-            <motion.button variants={itemVariants} className="bg-brand-yellow font-primary text-black px-6 py-4 rounded-full text-xl font-bold hover:scale-105 transition-transform w-full shadow-md">
+            <motion.button variants={itemVariants} className="bg-gradient-to-r from-orange-500 to-yellow-500 font-primary text-black px-6 py-4 rounded-full text-xl font-bold hover:scale-105 hover:shadow-lg transition-all w-full shadow-md">
               What we do
             </motion.button>
-            <motion.button variants={itemVariants} className="bg-brand-yellow font-primary text-black px-6 py-4 rounded-full text-xl font-bold hover:scale-105 transition-transform w-full shadow-md">
+            <motion.button variants={itemVariants} className="bg-gradient-to-r from-orange-500 to-yellow-500 font-primary text-black px-6 py-4 rounded-full text-xl font-bold hover:scale-105 hover:shadow-lg transition-all w-full shadow-md">
               Results & Wins
             </motion.button>
-             <motion.button variants={itemVariants} className="bg-brand-yellow font-primary text-black px-6 py-4 rounded-full text-xl font-bold hover:scale-105 transition-transform w-full shadow-md">
+             <motion.button variants={itemVariants} className="bg-gradient-to-r from-orange-500 to-yellow-500 font-primary text-black px-6 py-4 rounded-full text-xl font-bold hover:scale-105 hover:shadow-lg transition-all w-full shadow-md">
               Why choose us?
             </motion.button>
           </motion.div>

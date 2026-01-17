@@ -3,6 +3,8 @@ import Timeline from './components/Timeline';
 import FounderNote from './components/FounderNote';
 import Team from './components/Team';
 import Services from './components/Services';
+import Process from './components/Process';
+import CTA from './components/CTA';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <FounderNote />
       <Team />
       <Services />
+      <Process />
+      <CTA />
       {/* Other sections will follow */}
     </div>
   )

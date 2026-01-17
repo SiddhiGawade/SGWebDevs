@@ -13,6 +13,8 @@ export default {
                 'primary': ['Oswald', 'sans-serif'],
                 'secondary': ['Times New Roman', 'serif'],
                 'hand': ['Permanent Marker', 'cursive'],
+                'inter': ['Inter', 'sans-serif'],
+                'rounded': ['"Varela Round"', 'sans-serif'],
             }
         },
     },

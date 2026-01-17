@@ -5,21 +5,13 @@ import founderPic from '../assets/founder_pic.jpeg';
 const Timeline = () => {
   const containerRef = useRef(null);
 
-  // Complex Winding Path based on the uploaded image
-  // Scale: 1200x900 coordinate system to accommodate the vertical range
+  // Simplified Wave Path
+  // Scale: 1200x600 coordinate system (Reduced height)
   const pathDefinitionDesktop = `
-    M 50 150
-    C 150 150, 50 400, 100 400
-    S 50 650, 150 650
-    S 250 500, 250 500
-    S 250 800, 350 800
-    S 450 450, 450 450
-    S 550 550, 650 650
-    S 750 350, 750 350
-    S 850 500, 900 500
-    S 950 300, 1000 300
-    S 1050 150, 1100 150
-    S 1150 50, 1200 50
+    M 50 450
+    C 200 450, 200 150, 400 150
+    C 600 150, 600 550, 800 550
+    C 1000 550, 1000 250, 1150 250
   `;
 
   const pathVariants = {
@@ -27,37 +19,37 @@ const Timeline = () => {
     visible: { 
       pathLength: 1,
       transition: { 
-        duration: 4, 
+        duration: 3, 
         ease: "easeInOut",
-        delay: 0.5 
+        delay: 0.2 
       }
     }
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, scale: 0.5 },
+    hidden: { opacity: 0, y: 20 },
     visible: (custom) => ({
       opacity: 1, 
-      scale: 1,
-      transition: { delay: 1 + (custom * 0.3), duration: 0.5 }
+      y: 0,
+      transition: { delay: 0.5 + (custom * 0.2), duration: 0.5 }
     })
   };
 
   return (
-    <section ref={containerRef} className="bg-black text-white py-24 relative overflow-hidden">
+    <section ref={containerRef} className="bg-black text-white py-16 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10 w-full">
-        <h2 className="font-primary text-6xl md:text-7xl mb-12 text-center">The story so far</h2>
+        <h2 className="font-primary text-6xl md:text-7xl mb-8 text-center">The story so far</h2>
 
         {/* Desktop / Landscape View */}
-        <div className="relative w-full max-w-[1400px] mx-auto h-[900px] hidden md:block scale-90 origin-top">
+        <div className="relative w-full max-w-[1400px] mx-auto h-[600px] hidden md:block mt-10">
             
             {/* The Winding Line */}
-            <svg className="absolute top-0 left-0 w-full h-full overflow-visible" viewBox="0 0 1200 900" preserveAspectRatio="none">
+            <svg className="absolute top-0 left-0 w-full h-full overflow-visible" viewBox="0 0 1200 600" preserveAspectRatio="none">
                <motion.path
                   d={pathDefinitionDesktop}
                   fill="none"
                   stroke="white"
-                  strokeWidth="6"
+                  strokeWidth="4"
                   variants={pathVariants}
                   initial="hidden"
                   whileInView="visible"
@@ -65,121 +57,114 @@ const Timeline = () => {
                />
             </svg>
 
-            {/* Milestones */}
+            {/* Milestones - Repositioned for simplified path */}
             
-            {/* 1. 2020: Top Left */}
+            {/* 1. 2020: Start Low */}
             <motion.div custom={0} variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}
-              className="absolute top-[14%] left-[6%] w-48"
+              className="absolute top-[70%] left-[2%] w-48 text-center"
             >
-                <div className="w-5 h-5 bg-white rounded-full mb-2 border-4 border-black box-content relative z-20"></div>
-                <div className="font-primary text-xl uppercase">2020 I Discovered LinkedIn</div>
+                <div className="w-4 h-4 bg-white rounded-full mb-2 mx-auto border-2 border-black box-content relative z-20"></div>
+                <div className="font-primary text-sm md:text-base uppercase">2020<br/>I Discovered LinkedIn</div>
             </motion.div>
 
-            {/* 2. 2021: Mid Left */}
+            {/* 2. 2021: Rising */}
             <motion.div custom={1} variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}
-              className="absolute top-[42%] left-[9%] w-56"
+              className="absolute top-[45%] left-[10%] w-48 text-center"
             >
-                 <div className="w-5 h-5 bg-white rounded-full mb-2 border-4 border-black box-content relative z-20"></div>
-                 <div className="font-primary text-xl uppercase">2021<br/>Started working on my<br/>own personal brand</div>
+                 <div className="w-4 h-4 bg-white rounded-full mb-2 mx-auto border-2 border-black box-content relative z-20"></div>
+                 <div className="font-primary text-sm md:text-base uppercase">2021<br/>Started working on my<br/>own personal brand</div>
             </motion.div>
 
-            {/* 3. 2022: Low Left */}
+            {/* 3. 2022: Peak 1 */}
             <motion.div custom={2} variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}
-              className="absolute top-[70%] left-[5%] w-56"
+              className="absolute top-[18%] left-[20%] w-48 text-center"
             >
-                 <div className="w-5 h-5 bg-white rounded-full mb-2 border-4 border-black box-content relative z-20"></div>
-                 <div className="font-primary text-xl uppercase">2022<br/>Account grew and I<br/>got inbound leads</div>
+                 <div className="w-4 h-4 bg-white rounded-full mb-2 mx-auto border-2 border-black box-content relative z-20"></div>
+                 <div className="font-primary text-sm md:text-base uppercase">2022<br/>Account grew and I<br/>got inbound leads</div>
             </motion.div>
 
-            {/* 4. 2023: Mid Left Inner */}
+            {/* 4. 2023: Peak Plateau */}
             <motion.div custom={3} variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}
-              className="absolute top-[54%] left-[22%] w-48"
+              className="absolute top-[18%] left-[32%] w-48 text-center"
             >
-                 <div className="w-5 h-5 bg-white rounded-full mb-2 border-4 border-black box-content relative z-20"></div>
-                 <div className="font-primary text-xl uppercase">2023<br/>People asked<br/>'Can you do this<br/>for me?'</div>
+                 <div className="w-4 h-4 bg-white rounded-full mb-2 mx-auto border-2 border-black box-content relative z-20"></div>
+                 <div className="font-primary text-sm md:text-base uppercase">2023<br/>People asked<br/>'Can you do this for me?'</div>
             </motion.div>
 
-            {/* 5. 2024: Bottom Dip (Founder Image) */}
+            {/* 5. 2024: Start Descent (Founder) */}
             <motion.div custom={4} variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}
-              className="absolute top-[82%] left-[28%] w-60"
+              className="absolute top-[35%] left-[40%] w-56 text-center"
             >
-                 <div className="relative">
-                    <div className="w-5 h-5 bg-white rounded-full mb-2 border-4 border-black box-content relative z-20"></div>
-                    <div className="font-primary text-xl uppercase mb-2">2024<br/>Rare Elephant<br/>Media was Born</div>
-                 </div>
+                 <div className="w-4 h-4 bg-white rounded-full mb-2 mx-auto border-2 border-black box-content relative z-20"></div>
+                 <div className="font-primary text-lg font-bold text-brand-yellow uppercase">2024<br/>Rare Elephant<br/>Media was Born</div>
             </motion.div>
-             {/* Founder Image Floating near 2024 */}
+             {/* Founder Image near 2024 */}
              <motion.div 
                initial={{ opacity: 0, scale: 0 }}
                whileInView={{ opacity: 1, scale: 1 }}
-               transition={{ delay: 2.5, duration: 0.5 }}
-               className="absolute top-[80%] left-[28%] w-48 h-48 z-10 translate-x-12 translate-y-4"
+               transition={{ delay: 1.5, duration: 0.5 }}
+               className="absolute top-[12%] left-[43%] w-32 h-32 z-10"
              >
-                 <img src={founderPic} alt="Founder" className="w-full h-full object-cover rounded-full border-4 border-white shadow-xl" />
+                 <img src={founderPic} alt="Founder" className="w-full h-full object-cover rounded-full border-2 border-white shadow-xl" />
              </motion.div>
 
 
-            {/* 6. Hired New Team: Mid Center */}
+            {/* 6. Hired New Team: Deep Descent */}
             <motion.div custom={5} variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}
-              className="absolute top-[48%] left-[38%] w-48"
+              className="absolute top-[60%] left-[50%] w-48 text-center"
             >
-                 <div className="w-5 h-5 bg-white rounded-full mb-2 border-4 border-black box-content relative z-20"></div>
-                 <div className="font-primary text-lg uppercase">Hired New Team<br/>Members</div>
+                 <div className="w-4 h-4 bg-white rounded-full mb-2 mx-auto border-2 border-black box-content relative z-20"></div>
+                 <div className="font-primary text-sm md:text-base uppercase">Hired New Team<br/>Members</div>
             </motion.div>
+
+             {/* 7. Onboarded: Bottom */}
              <motion.div custom={6} variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}
-              className="absolute top-[65%] left-[38%] w-48"
+              className="absolute top-[85%] left-[58%] w-48 text-center"
             >
-                 <div className="w-5 h-5 bg-white rounded-full mb-2 border-4 border-black box-content relative z-20"></div>
-                 <div className="font-primary text-lg uppercase">Onboarded<br/>First Set of<br/>Clients</div>
+                 <div className="w-4 h-4 bg-white rounded-full mb-2 mx-auto border-2 border-black box-content relative z-20"></div>
+                 <div className="font-primary text-sm md:text-base uppercase">Onboarded<br/>First Set of<br/>Clients</div>
             </motion.div>
 
-            {/* 7. International Payment: Low Mid Right */}
+            {/* 8. International Payment: Bottom Plateau */}
             <motion.div custom={7} variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}
-              className="absolute top-[70%] left-[55%] w-48"
+              className="absolute top-[85%] left-[70%] w-48 text-center"
             >
-                 <div className="w-5 h-5 bg-white rounded-full mb-2 border-4 border-black box-content relative z-20"></div>
-                 <div className="font-primary text-lg uppercase">Got my first<br/>international<br/>client payment<br/>in dollars</div>
+                 <div className="w-4 h-4 bg-white rounded-full mb-2 mx-auto border-2 border-black box-content relative z-20"></div>
+                 <div className="font-primary text-sm md:text-base uppercase">Got my first<br/>international<br/>payment</div>
             </motion.div>
 
-            {/* 8. SOPs: Mid Right */}
+            {/* 9. SOPs: Rising */}
             <motion.div custom={8} variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}
-              className="absolute top-[38%] left-[62%] w-48"
+              className="absolute top-[65%] left-[80%] w-48 text-center"
             >
-                 <div className="w-5 h-5 bg-white rounded-full mb-2 border-4 border-black box-content relative z-20"></div>
-                 <div className="font-primary text-lg uppercase">Built an SOP,<br/>Website, Channel,<br/>and Structures</div>
+                 <div className="w-4 h-4 bg-white rounded-full mb-2 mx-auto border-2 border-black box-content relative z-20"></div>
+                 <div className="font-primary text-sm md:text-base uppercase">Built SOPs,<br/>Website &<br/>Structures</div>
             </motion.div>
 
-             {/* 9. Retainer: Mid Upper Right */}
+             {/* 10. Retainer: Rising Higher */}
              <motion.div custom={9} variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}
-              className="absolute top-[55%] left-[75%] w-48"
+              className="absolute top-[45%] left-[88%] w-48 text-center"
             >
-                 <div className="w-5 h-5 bg-white rounded-full mb-2 border-4 border-black box-content relative z-20"></div>
-                 <div className="font-primary text-lg uppercase">Landed our<br/>Biggest Retainer<br/>Client</div>
+                 <div className="w-4 h-4 bg-white rounded-full mb-2 mx-auto border-2 border-black box-content relative z-20"></div>
+                 <div className="font-primary text-sm md:text-base uppercase">Landed our<br/>Biggest Retainer</div>
             </motion.div>
 
-            {/* 10. Niched Down: Upper Right */}
+            {/* 11. Niched Down: High End */}
             <motion.div custom={10} variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}
-              className="absolute top-[32%] left-[83%] w-56"
+              className="absolute top-[25%] left-[95%] w-56 text-right -translate-x-1/2"
             >
-                 <div className="w-5 h-5 bg-white rounded-full mb-2 border-4 border-black box-content relative z-20"></div>
-                 <div className="font-primary text-lg uppercase">Niched down and<br/>upskilled to make<br/>our services even<br/>better</div>
+                 <div className="w-4 h-4 bg-white rounded-full mb-2 ml-auto mr-0 md:mx-auto border-2 border-black box-content relative z-20"></div>
+                 <div className="font-primary text-sm md:text-base uppercase">Niched down &<br/>Upskilled</div>
             </motion.div>
 
-             {/* 11. Hired Excellent: High Right */}
-             <motion.div custom={11} variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}
-              className="absolute top-[16%] left-[90%] w-56 -translate-x-full text-right"
-            >
-                 <div className="w-5 h-5 bg-white rounded-full mb-2 ml-auto border-4 border-black box-content relative z-20"></div>
-                 <div className="font-primary text-lg uppercase">Hired Excellent<br/>People into the<br/>team again (and<br/>had to fire too!)</div>
-            </motion.div>
-            
-             {/* 12. Learning: Top Right */}
-             <motion.div custom={12} variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}
-              className="absolute top-[5%] left-[95%] w-48 text-right -translate-x-12"
-            >
-                 <div className="w-5 h-5 bg-white rounded-full mb-2 ml-auto border-4 border-black box-content relative z-20"></div>
-                 <div className="font-primary text-lg uppercase">Constantly<br/>Learning and<br/>Growing</div>
-            </motion.div>
+             {/* 12. Learning: Hired Excellent (Combined/Simplified for space if needed, keeping 12th item) */}
+              <motion.div custom={11} variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}
+               className="absolute top-[10%] left-[85%] w-48 text-center"
+             >
+                  {/* Placing this "Constantly Learning" or "Hired Excellent" above loop */}
+                   <div className="w-4 h-4 bg-white rounded-full mb-2 mx-auto border-2 border-black box-content relative z-20"></div>
+                   <div className="font-primary text-sm md:text-base uppercase">Constantly<br/>Learning & Growing</div>
+             </motion.div>
 
         </div>
 

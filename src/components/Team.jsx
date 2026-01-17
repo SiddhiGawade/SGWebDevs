@@ -65,14 +65,14 @@ const Team = () => {
     };
 
   return (
-    <section className="bg-brand-yellow py-20 relative overflow-hidden">
+    <section className="bg-[#FFA500] py-20 relative overflow-hidden">
         <div className="container mx-auto px-4">
             <motion.h2 
-                initial={{ opacity: 0, y: -20 }}
+                initial={{ opacity: 0, y: -20 }}    
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="font-primary text-5xl md:text-7xl text-center mb-20 text-black"
+                className="font-primary text-4xl md:text-6xl text-center mb-20 text-black"
             >
                 Meet the <span className="font-hand inline-block hover:rotate-3 transition-transform duration-300">(tiny but mighty)</span> Team
             </motion.h2>
@@ -101,10 +101,11 @@ const Team = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.8, duration: 0.6 }}
-                className="mt-24 max-w-4xl mx-auto text-center font-primary uppercase text-3xl md:text-5xl leading-tight"
+                className="mt-20 max-w-4xl mx-auto text-center font-primary uppercase text-2xl md:text-5xl leading-tight"
             >
-                <span className="text-8xl font-serif align-top text-white">“</span>
+                <span className="text-2xl font-serif align-top text-white">“ </span>
                 YOU WON'T BE HANDED OFF TO AN ACCOUNT MANAGER AND FORGOTTEN. EVERYTHING WE DO IS HANDCRAFTED.
+                <span className="text-2xl font-serif align-top text-white"> ”</span>
             </motion.div>
         </div>
     </section>
