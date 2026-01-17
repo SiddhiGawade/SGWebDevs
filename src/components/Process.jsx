@@ -27,7 +27,7 @@ const Process = () => {
                        Q 280 350 430 350 
                        L 550 350 
                        Q 700 350 700 500 
-                       L 700 1050"
+                       L 700 1500"
                     fill="none"
                     stroke="black"
                     strokeWidth="70"
@@ -40,7 +40,7 @@ const Process = () => {
                        Q 280 350 430 350 
                        L 550 350 
                        Q 700 350 700 500 
-                       L 700 1050"
+                       L 700 1500"
                     fill="none"
                     stroke="Orange"
                     strokeWidth="4"

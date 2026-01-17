@@ -33,7 +33,7 @@ const TeamMember = ({ name, role, rotation, image }) => (
             ></motion.div>
             
              {/* Shine/Star elements */}
-             <div className="absolute -top-4 -right-4 text-white text-4xl animate-pulse">✨</div>
+             {/* <div className="absolute -top-4 -right-4 text-white text-4xl animate-pulse">  </div> */}
         </div>
         
         {/* Name and Role path text effect - Simplified for web implementation */}
