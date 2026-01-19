@@ -76,16 +76,16 @@ const FounderNote = () => {
                 
                 <div className="font-hand text-xl md:text-2xl leading-relaxed space-y-4 text-gray-800">
                     <motion.p variants={textVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: 0.2 }}>
-                        SpWeb@Devs isn't just a company, it's our exciting journey that began in 2020. We started as freelancer, passionate about digital creativity. Driven by the belief that anyone, regardless of their background, can succeed, we grew into a full-fledged agency. Each project we dive into carries our heartfelt dedication to breaking barriers and creating opportunities.
-                        SPWeb@Devs is more than a brand, it's a story of hard work, overcoming challenges, and a commitment to making the digital world open to everyone. Come be part of our adventure, where every success story is filled with innovation and endless possibilities!
+                        SG Siddhi-explains-Tech isn't just a company, it's our exciting journey that began in 2020. We started as freelancer, passionate about digital creativity. Driven by the belief that anyone, regardless of their background, can succeed, we grew into a full-fledged agency. Each project we dive into carries our heartfelt dedication to breaking barriers and creating opportunities.
+                        SG Siddhi-explains-Tech is more than a brand, it's a story of hard work, overcoming challenges, and a commitment to making the digital world open to everyone. Come be part of our adventure, where every success story is filled with innovation and endless possibilities!
                     </motion.p>
                    
 
                     <motion.p variants={textVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: 0.4 }}>
-                        So I built SPWebDevs to do one thing exceptionally well: Web Development.
+                        So I built SG Siddhi-explains-Tech to do one thing exceptionally well: Web Development.
                     </motion.p>
                     <motion.p variants={textVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: 0.6 }}>
-                        We're called SPWebDevs for a reason. We value quiet power. Long-term trust. Thoughtful moves. And showing up in a way that feels calm, confident, and unforgettable just like the clients we serve. This isn't about going viral. It's about building something real & sustainable.
+                        We're called SG Siddhi-explains-Tech for a reason. We value quiet power. Long-term trust. Thoughtful moves. And showing up in a way that feels calm, confident, and unforgettable just like the clients we serve. This isn't about going viral. It's about building something real & sustainable.
                     </motion.p>
                 </div>
             </motion.div>

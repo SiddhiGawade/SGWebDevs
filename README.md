@@ -1,4 +1,4 @@
-# Rare Elephant Media (SPWebDevs)
+# Rare Elephant Media (SG Siddhi-explains-Tech)
 
 A modern, high-performance marketing agency website built with React and Tailwind CSS. This project features a unique, visually striking design with smooth animations and interactive elements.
 
@@ -53,4 +53,4 @@ This project is configured for deployment on **Vercel**.
 
 ---
 
-© 2026 Rare Elephant Media / SPWebDevs. All rights reserved.
+© 2026 Rare Elephant Media / SG Siddhi-explains-Tech. All rights reserved.

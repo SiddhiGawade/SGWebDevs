@@ -21,11 +21,11 @@ const CTA = () => {
                 {/* Decorative Elements around image */}
                 <div className="absolute -inset-4 bg-white/20 rounded-t-[200px] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
-                <div className="bg-black p-6 rounded-t-[200px] shadow-2xl transform transition-transform duration-500 hover:-translate-y-2 relative max-w-[320px] mx-auto md:mx-0">
+                <div className="bg-black p-3 rounded-t-[200px] shadow-2xl transform transition-transform duration-500 hover:-translate-y-2 relative max-w-[320px] mx-auto md:mx-0">
                     <div className="rounded-t-[170px] overflow-hidden bg-gray-800 aspect-[3/4] relative">
                          <img 
-                            src={officeImage} 
-                            alt="Office Creative Space" 
+                            src={spLogo} 
+                            alt="SG Siddhi-explains-Tech Logo" 
                             className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500"
                          />
                     </div>
@@ -57,7 +57,7 @@ const CTA = () => {
                
                {/* Left: Copyright / Links */}
                <div className="text-black/70 text-sm font-medium">
-                  © {new Date().getFullYear()} SPWebDevs. All rights reserved.
+                  © {new Date().getFullYear()} SG Siddhi-explains-Tech. All rights reserved.
                </div>
 
                {/* Right: Socials & Logo */}

@@ -71,7 +71,7 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="flex items-center space-x-2"
           >
-            <img src={logo} alt="SPWebDevs Logo" className="h-auto w-48 object-contain" />
+            <img src={logo} alt="SG Siddhi-explains-Tech Logo" className="h-auto w-48 object-contain" />
           </motion.div>
 
           {/* Typing Animation for Heading */}
