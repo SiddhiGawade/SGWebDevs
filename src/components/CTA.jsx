@@ -1,7 +1,7 @@
 import React from 'react';
 import { Linkedin, Instagram, Mail } from 'lucide-react';
 import officeImage from '../assets/office_elephant_logo.png';
-import spLogo from '../assets/SPWebDevs Logo.png';
+import spLogo from '../assets/founder_pic.jpeg';
 
 const CTA = () => {
   return (
